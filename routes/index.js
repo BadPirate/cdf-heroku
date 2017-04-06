@@ -10,7 +10,7 @@ function districtResponse(res, result) {
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
+  res.redirect('https://github.com/BadPirate/cdf-heroku/blob/master/README.md')
 });
 
 router.get('/api/coordinate/:latitude/:longitude', function(req, res) {
