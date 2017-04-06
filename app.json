@@ -1,0 +1,7 @@
+{
+  "name": "Congressional District Finder",
+  "description": "Restful API for retrieving congressional districts",
+  "repository": "https://github.com/BadPirate/cdf-heroku",
+  "logo": "https://node-js-sample.herokuapp.com/node.svg",
+  "keywords": ["node", "express", "static", "congress", "districts"]
+}

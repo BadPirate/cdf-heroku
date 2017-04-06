@@ -5,6 +5,12 @@ info:
   title: Congress District API
   description: Restful API for retrieving congressional districts
   version: "1.0.0"
+  contact:
+    name: Kevin Lohman
+    url: https://congress.logichigh.com
+    email: congress@logichigh.com
+  license:
+    name: MIT
 # the domain of the service
 host: congress.logichigh.com
 # array of all schemes that your API supports
