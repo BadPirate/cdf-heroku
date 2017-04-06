@@ -1,0 +1,62 @@
+# this is an example of the Uber API
+# as a demonstration of an API spec in YAML
+swagger: '2.0'
+info:
+  title: Congress District API
+  description: Restful API for retrieving congressional districts
+  version: "1.0.0"
+# the domain of the service
+host: congress.logichigh.com
+# array of all schemes that your API supports
+schemes:
+  - http
+  - https
+# will be prefixed to all paths
+basePath: /api
+produces:
+  - application/json
+paths:
+  /coordinate/{latitude}/{longitude}:
+    get:
+      operationId: coordinate
+      summary: Coordinate based retrieval
+      parameters:
+        - name: latitude
+          in: path
+          description: Latitude component of location.
+          required: true
+          type: number
+          format: double
+        - name: longitude
+          in: path
+          description: Longitude component of location.
+          required: true
+          type: number
+          format: double
+      responses:
+        200:
+          description: Congressional District
+          schema:
+            $ref: '#/definitions/District'
+        500:
+          description: Unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+definitions:
+  District:
+    type: object
+    properties:
+      id:
+        type: string
+        description: Congressional District ID
+      name:
+        type: string
+        description: District name
+  Error:
+    type: object
+    properties:
+      statusCode:
+        type: integer
+        format: int32
+      message:
+        type: string

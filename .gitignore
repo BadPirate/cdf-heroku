@@ -25,3 +25,7 @@ coverage
 
 # Benchmarking
 benchmarks/graphs
+
+# Swagger
+docs
+codegen.jar

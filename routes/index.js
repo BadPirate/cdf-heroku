@@ -13,7 +13,7 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
 });
 
-router.get('/coordinate/:latitude/:longitude', function(req, res) {
+router.get('/api/coordinate/:latitude/:longitude', function(req, res) {
   var lat = req.params.latitude
   var lng = req.params.longitude
   console.log("Request sent for lat: "+lat+" lng: "+lng)
@@ -23,7 +23,7 @@ router.get('/coordinate/:latitude/:longitude', function(req, res) {
       })
       .catch(function(err) {
         console.log(err);
-        res.status(500).send(err.message);
+        res.status(500).json(err);
     })
 });
 
