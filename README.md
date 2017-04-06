@@ -7,6 +7,8 @@
 
  # Usage
  Unless it gets bombarded, I'm running an instance for you at [http://congress.logichigh.com](http://congress.logichigh.com/docs), so you can make the API calls straight!
+ ## Documentation
+ Documentation is generated from the swagger.yml file automatically and placed in the [docs](http://congress.logichigh.com/docs) directory
 
  # Installation
  ## Deploy to Heroku:
